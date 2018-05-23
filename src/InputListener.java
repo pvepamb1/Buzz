@@ -9,9 +9,7 @@ public class InputListener implements Runnable{
 	DataOutputStream output;
 
 	public InputListener(OutputStream outputStream) {
-
 		output = new DataOutputStream(outputStream);
-		
 	}
 
 
@@ -19,8 +17,8 @@ public class InputListener implements Runnable{
 	public void run() {
 		Scanner s = new Scanner(System.in);
 		while(true) {
-		String line;
-		if((line = s.nextLine())!="") {
+		String line = s.nextLine();
+		if(line != "") {
 			try {
 				output.writeUTF(line);
 			} catch (IOException e) {

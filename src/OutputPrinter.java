@@ -7,10 +7,9 @@ public class OutputPrinter implements Runnable{
 	DataInputStream input;
 	
 	public OutputPrinter(InputStream inputStream) {
-		
 		input = new DataInputStream(inputStream);
-		
 	}
+	
 	@Override
 	public void run() {
 		while(true) {

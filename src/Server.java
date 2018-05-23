@@ -1,7 +1,6 @@
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class Server {
 
@@ -17,10 +16,7 @@ public class Server {
 		Thread t2 = new Thread(print, "ServerPrinter");
 		t2.start();
 		
-		Scanner s2 = new Scanner(System.in);
-		while(s2.nextLine()!="podhum") {
-			
-		}s2.close();
+		while(t.isAlive()) {}
 		server.close();
 	}
 
